@@ -19,4 +19,12 @@ def guessNumber(startRange,endRange):
         else:
             print("Invalid input. Please enter Y or N.")
             return guessNumber(startRange,endRange)
-    
+#Driver Code
+if __name__=="__main__":
+    print("Number Guessing Game")
+    startRange=int(input("Enter the start of the range: "))
+    endRange=int(input("Enter the end of the range: "))
+    print(f"Think of a number between {startRange} and {endRange} (inclusive) and I will try to guess it.")
+    out=guessNumber(startRange,endRange)
+    if out:
+        print("Couldn't guess it. Are you sure you answered correctly?")
